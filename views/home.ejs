@@ -8,7 +8,20 @@
 <body>
         <h2>New User?</h2>
         <form action="/register" method="post">
-            Username : 
+            Username : <input type="text" name="username" placeholder="Please enter your username" required> <br>
+            Password : <input type="password" name="password" placeholder="Please enter your password" required> <br>
+            <Select name="role" required>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </Select>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <h2>Returning User?</h2>
+        <form action="/login" method="post">
+            Username : <input type="text" name="username" placeholder="Please enter your username"> <br>
+            Password : <input type="password" name="password" placeholder="Please enter your password"> <br>
+            <button type="submit">Sign Up</button>
         </form>
 </body>
 </html>
