@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require('path')
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const port = 5000;
@@ -7,6 +8,9 @@ const port = 5000;
 app.use(cookieParser());
 app.use(express.urlencoded({extended: true}))
 app.set('view engine', 'ejs');
+app.use(express.static('docs'))
+app.set('views', path.join(__dirname, 'docs')); // Set the views directory to docs
+
 
 const uri = 'mongodb://localhost:27017/my-database';
 
